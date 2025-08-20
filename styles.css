@@ -1,0 +1,100 @@
+/* Typography */
+/* :root {
+  --font-display: 'Libre Baskerville', Georgia, 'Times New Roman', serif;
+  --font-body: 'Source Sans 3', system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial, sans-serif;
+} */
+
+:root {
+  --font-display: 'Jacques Francois Shadow', serif;
+  --font-body: 'Source Sans 3', system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  line-height: 1.5;
+}
+
+.wrap {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem 1.5rem;
+}
+
+/* Center column */
+.wrap > * {
+  text-align: center;
+}
+
+/* Brand block */
+.brand .logo {
+  display: block;
+  width: clamp(160px, 18vw, 240px);
+  max-width: 100%;
+  margin: 0 auto 0;
+  height: auto;
+}
+
+.brand .location {
+  letter-spacing: 0.25em;
+  font-weight: 600;
+  font-size: clamp(0.75rem, 1.1vw, 0.95rem);
+}
+
+/* Info block */
+.info {
+  font-family: var(--font-display);
+}
+
+.schedule {
+  margin: 0 0 1.2rem;
+  font-size: clamp(0.85rem, 1.1vw, 1rem);
+}
+
+.address {
+  margin: 0;
+  font-style: normal;
+  font-size: clamp(0.85rem, 1.05vw, 0.95rem);
+  line-height: 1.4;
+}
+
+/* Social icons */
+.social {
+  display: flex;
+  gap: 0rem;
+  justify-content: center;
+  margin-top: 1.25rem;
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  text-decoration: none;
+}
+
+/* Subtle focus for accessibility */
+.icon:focus-visible {
+  outline: 2px dashed currentColor;
+  outline-offset: 3px;
+}
+
+/* Responsive spacing on very small screens */
+@media (max-width: 380px) {
+  .wrap {
+    padding: 3rem 1rem;
+  }
+}
